@@ -1,0 +1,108 @@
+.clear {
+    clear: both;
+}
+
+body {
+    background-color: rgb(235, 238, 235);
+}
+
+#container {
+    /*border: 1px solid black;*/
+    width: 920px;
+    margin: 0px auto;
+}
+
+#titulo {
+    color: rgb(96, 40, 160);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgb(161, 161, 161);
+}
+
+#navegacao {
+    width: 400px;
+    margin: 10px auto;
+}
+
+#navegacao ul {
+    float: left;
+    list-style: none;
+    margin-left: auto;
+}
+
+#navegacao ul li {
+    float: left;
+    margin: 3px;
+}
+
+#navegacao ul li a {
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    background-color: rgb(148, 76, 231);
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#navegacao ul li a:hover {
+    box-shadow: 2px 2px 4px black;
+    color: rgb(235, 238, 235);
+}
+
+#corpo {
+    /*background-color: aqua;*/
+    height: 300px;
+    width: 100%;
+    text-align: center;
+}
+
+#corpo input {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-size: 1.3em;
+    color: rgb(104, 214, 0);
+    text-shadow: 1px 1px black;
+}
+
+#telaQuadrados {
+    background-color: black;
+    width: 450px;
+    margin: 0 auto;
+}
+
+#alinhamento {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+#telaQuadrados span {
+    margin: 0px;
+    width: 120px;
+    height: 110px;
+    display:inline-block;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#telaQuadrados span.selecionado{
+    background-color: rgb(17, 93, 138);
+}
+
+#telaQuadrados span.errado{
+    background-color: rgb(211, 49, 49);
+}
+
+#telaQuadrados span.clicado{
+    background-color: rgb(110, 202, 255);
+}
+
+#telaQuadrados span.vazio {
+    background-color: rgb(247, 246, 243);
+}

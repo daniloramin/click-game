@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Início</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+    <div id="container">
+        <!-- Início header -->
+        <header>
+            <div id="titulo">
+                <span>quick click game</span>
+            </div>
+
+            <div id="navegacao">
+                <ul>
+                    <li><a href="index.html">Clássic</a></li>
+                    <li><a href="">Option 2</a></li>
+                    <li><a href="">Option 3</a></li>
+                    <li><a href="">Option 4</a></li>
+                </ul>
+            </div>
+
+            <div class="clear"></div>
+        </header>
+
+        <!-- Início corpo -->
+        <div id="corpo">
+            <input id="pontos" type="text" value="0" disabled>
+            <div id="telaQuadrados">
+                <div id="alinhamento">
+                    <span id="1" onclick="ativaClick('1')" class="vazio"></span>
+                    <span id="2" onclick="ativaClick('2')" class="vazio"></span>
+                    <span id="3" onclick="ativaClick('3')" class="vazio"></span>
+                    <span id="4" onclick="ativaClick('4')" class="vazio"></span>
+                    <span id="5" onclick="ativaClick('5')" class="vazio"></span>
+                    <span id="6" onclick="ativaClick('6')" class="vazio"></span>
+                    <span id="7" onclick="ativaClick('7')" class="vazio"></span>
+                    <span id="8" onclick="ativaClick('8')" class="vazio"></span>
+                    <span id="9" onclick="ativaClick('9')" class="vazio"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Início footer -->
+        <footer>
+
+        </footer>
+    </div>
+
+    <script>
+        var pontos = 0;
+        var elementos = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        var tamanho_array = elementos.length;
+
+        var aleatorio = Math.floor(Math.random() * tamanho_array);
+        var retorna_aleatorio = elementos[aleatorio];
+        document.getElementById(retorna_aleatorio).className = 'selecionado';
+
+        var ativaClick = function (numero) {
+            var classe = document.getElementById(numero).className;
+
+            switch (classe) {
+                case 'vazio':
+                    pontos -= 1;
+                    document.getElementById('pontos').value = pontos;
+                    break;
+                
+                case 'selecionado': 
+                    pontos += 1;
+                    document.getElementById('pontos').value = pontos;
+                    document.getElementById(numero).className = 'vazio';
+                    var aleatorio = Math.floor(Math.random() * tamanho_array);
+                    var retorna_aleatorio = elementos[aleatorio];
+                    document.getElementById(retorna_aleatorio).className = 'selecionado';
+                    break;
+            }
+        };
+    </script>
+</body>
+</html>
